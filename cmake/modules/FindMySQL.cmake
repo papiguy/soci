@@ -32,6 +32,8 @@ else(WIN32)
       $ENV{MYSQL_DIR}/include
       /usr/local/mysql/include
       /opt/mysql/mysql/include
+      /usr/local/include/mysql
+      /usr/include/mysql
       PATH_SUFFIXES
       mysql
    )
@@ -84,10 +86,13 @@ else(WIN32)
       $ENV{MYSQL_DIR}/lib/mysql
       /usr/local/mysql/lib
       /opt/mysql/mysql/lib
+      /usr/local/lib
+      /usr/lib
+      /usr/lib64
       PATH_SUFFIXES
       mysql
    )
-   find_library(MYSQL_LIBRARIES NAMES mysqlclient
+   find_library(MYSQL_LIBRARIES NAMES mysqlclient mysqlclient_r
       PATHS
       ${MYSQL_LIB_PATHS}
    )

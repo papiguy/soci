@@ -13,6 +13,7 @@ colormsg(_HIBLUE_ "Configuring SOCI backend libraries:")
 # First, we'll investigate what can be found from database engines
 foreach(dep ${SOCI_BACKENDS_DB_DEPENDENCIES})
 	string(TOUPPER ${dep} depUP)
+	message(STATUS "WITH_${depUP} : ${WITH_${depUP}}")
 	if (WITH_${depUP})
 		find_package(${dep})
 	endif()

@@ -23,7 +23,6 @@ option(SOCI_STATIC "Enable build of static libraries" ON)
 option(SOCI_TESTS "Enable build of collection of SOCI tests" ON)
 option(SOCI_ASAN "Enable address sanitizer on GCC v4.8+/Clang v 3.1+" OFF)
 
-
 ###############################################################################
 # SOCI CMake modules
 ###############################################################################
