@@ -73,6 +73,8 @@ set(SOCI_CORE_TARGET)
 set(SOCI_CORE_TARGET_STATIC)
 set(SOCI_CORE_DEPS_LIBS)
 
+add_definitions(-Wno-deprecated-declarations)
+
 include(SociDependencies)
 
 get_property(SOCI_INCLUDE_DIRS DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
